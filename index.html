@@ -19,8 +19,8 @@
 <body>
 
     <section class="home d-flex justify-content-center align-items-center flex-column vh-100">
-        <div class="overlay"></div>
-        <nav class="bg-dark px-4 pt-5 position-fixed z-2 top-0 vh-100">
+        <div class="overlay position-absolute top-0 start-0 w-100 h-100"></div>
+        <nav class="bg-dark px-4 pt-5 position-fixed z-4 top-0 vh-100">
             <div class="icon position-absolute top-50 fs-2 text-dark" role="button">
                 <i class="fa-solid fa-bars"></i>
             </div>
@@ -116,6 +116,16 @@
         </div>
     </section>
 
+    <section class="count-down position-relative">
+        <div class="overlay position-absolute top-0 start-0 w-100 h-100 z-1"></div>
+        <div
+            class="event-section container position-relative py-5 z-2 text-white d-flex align-items-center justify-content-evenly">
+            <div class="days p-5 fs-3 fw-semibold border-1 border-white border"></div>
+            <div class="hours p-5 fs-3 fw-semibold border-1 border-white border"></div>
+            <div class="mins p-5 fs-3 fw-semibold border-1 border-white border"></div>
+            <div class="sec p-5 fs-3 fw-semibold border-1 border-white border"></div>
+        </div>
+    </section>
 
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"
         integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
