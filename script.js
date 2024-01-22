@@ -9,3 +9,5 @@ barsIcon.addEventListener("click", () => {
 closeIcon.addEventListener("click", () => {
   nav.classList.remove("show-nav");
 });
+
+

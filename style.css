@@ -9,10 +9,6 @@ h1 {
   font-size: 50px;
 }
 
-body {
-  height: 3000px;
-}
-
 .home {
   background-image: url("./imgs/events-heavenly-header.jpg");
   background-repeat: no-repeat;
@@ -48,7 +44,7 @@ nav {
 }
 
 nav li a,
-nav li i{
+nav li i {
   transition: all 0.3s;
   -webkit-transition: all 0.3s;
   -moz-transition: all 0.3s;
@@ -56,7 +52,32 @@ nav li i{
   -o-transition: all 0.3s;
 }
 nav li:hover a,
-nav li:hover i{
+nav li:hover i {
   color: rgba(214, 46, 51, 0.4) !important;
 }
 
+.singers h2, .accordion-button {
+  background-color: #e68285;
+}
+
+p {
+  transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  -o-transition: all 0.5s;
+}
+
+.accordion-button::after {
+  width: 0;
+  height: 0;
+}
+
+.accordion-button:focus {
+  border-color: transparent;
+  box-shadow: none;
+}
+
+.accordion-button:not(.collapsed) {
+  background-color: #e68285;
+}
