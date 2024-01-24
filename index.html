@@ -18,26 +18,27 @@
 
 <body>
 
-    <section class="home d-flex justify-content-center align-items-center flex-column vh-100">
+    <nav class="bg-dark px-4 pt-5 position-fixed z-3 top-0 vh-100">
+        <div class="icon position-absolute top-50 fs-2 text-dark" role="button">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+        <ul class="list-unstyled">
+            <li class="d-flex justify-content-end" role="button"><i class="fa-solid fa-xmark fs-2 text-white"></i>
+            </li>
+            <li role="button" class="mb-5"><a class="fs-3 text-decoration-none text-white" href="#home">Home</a></li>
+            <li role="button" class="mb-5"><a class="fs-3 text-decoration-none text-white" href="#details">Details</a></li>
+            <li role="button" class="mb-5"><a class="fs-3 text-decoration-none text-white" href="#duration">Duration</a></li>
+            <li role="button" class="mb-5"><a class="fs-3 text-decoration-none text-white" href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section id="home" class="home d-flex justify-content-center align-items-center flex-column vh-100">
         <div class="overlay position-absolute top-0 start-0 w-100 h-100"></div>
-        <nav class="bg-dark px-4 pt-5 position-fixed z-4 top-0 vh-100">
-            <div class="icon position-absolute top-50 fs-2 text-dark" role="button">
-                <i class="fa-solid fa-bars"></i>
-            </div>
-            <ul class="list-unstyled">
-                <li class="d-flex justify-content-end" role="button"><i class="fa-solid fa-xmark fs-2 text-white"></i>
-                </li>
-                <li role="button" class="mb-5"><a class="fs-3 text-decoration-none text-white" href="">Home</a></li>
-                <li role="button" class="mb-5"><a class="fs-3 text-decoration-none text-white" href="">Details</a></li>
-                <li role="button" class="mb-5"><a class="fs-3 text-decoration-none text-white" href="">Duration</a></li>
-                <li role="button" class="mb-5"><a class="fs-3 text-decoration-none text-white" href="">Contact</a></li>
-            </ul>
-        </nav>
         <h1 class="fw-bold text-white position-relative z-2">Egyptian Party</h1>
         <p class="text-white position-relative z-2">Let's have Fun</p>
     </section>
 
-    <section class="singers container py-5 text-center">
+    <section id="details" class="singers container py-5 text-center">
         <div class="accordion accordion-flush w-75 m-auto py-5" id="accordionFlushExample">
             <div class="accordion-item border-0">
                 <h2 class="accordion-header">
@@ -116,7 +117,7 @@
         </div>
     </section>
 
-    <section class="count-down position-relative">
+    <section id="duration" class="count-down position-relative">
         <div class="overlay position-absolute top-0 start-0 w-100 h-100 z-1"></div>
         <div
             class="event-section container position-relative py-5 z-2 text-white d-flex align-items-center justify-content-evenly">
@@ -124,6 +125,54 @@
             <div class="hours p-5 fs-3 fw-semibold border-1 border-white border"></div>
             <div class="mins p-5 fs-3 fw-semibold border-1 border-white border"></div>
             <div class="sec p-5 fs-3 fw-semibold border-1 border-white border"></div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact py-5">
+        <div class="container my-5">
+            <h2 class="text-uppercase fw-bold fs-1">Join us</h2>
+            <p class="text-center lead">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+            <div class="row">
+                <div class="col-sm-10 col-lg-6 mb-3">
+                    <h3 class="fw-bolder text-uppercase">contact info</h3>
+                    <p class="text-center text-muted fs-5 mb-3">Why you should hire me writeup Lorem ipsum dolor sit amet,
+                        consectetuer adipiscing elit. Aenean
+                        commodo ligula eget dolor. Aenean massa. Cum sociis natoque nascetur ridiculus mus.</p>
+                    <address class="text-center text-muted fs-5 mb-3">New Street 22545, Nexa Road, New York City, USA
+                    </address>
+                    <p class="text-center text-danger fs-5 mb-3"> hello@uigrid.com</p>
+                    <p class="text-center lead mb-5">001-000-000 -000</p>
+                    <div class="social d-flex gap-4">
+                        <div class="icon border border-1 border-secondary">
+                            <i class="fa-brands fa-twitter text-muted fs-5 py-3 px-3"></i>
+                        </div>
+                        <div class="icon border border-1 border-secondary ">
+                            <i class="fa-brands fa-facebook text-muted fs-5 py-3 px-3"></i>
+                        </div>
+                        <div class="icon border border-1 border-secondary ">
+                            <i class="fa-brands fa-instagram text-muted fs-5 py-3 px-3"></i>
+                        </div>
+                        <div class="icon border border-1 border-secondary ">
+                            <i class="fa-brands fa-pinterest text-muted fs-5 py-3 px-3"></i>
+                        </div>
+                        <div class="icon border border-1 border-secondary ">
+                            <i class="fa-brands fa-twitch text-muted fs-5 py-3 px-3"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-10 col-lg-6">
+                    <form action="">
+                        <input type="text" class="form-control mb-4 border border-1 border-secondary"
+                            placeholder="Enter Name">
+                        <input type="email" class="form-control mb-4 border border-1 border-secondary"
+                            placeholder="Enter Email">
+                        <textarea class="form-control mb-4 border border-1 border-secondary" name="" id="" cols="30"
+                            rows="10" placeholder="Enter Message"></textarea>
+                        <p><span class="text-danger fs-3 pe-2">100</span>character Remaining</p>
+                        <div class="btn btn-danger py-2 px-3 text-uppercase">send message</div>
+                    </form>
+                </div>
+            </div>
         </div>
     </section>
 

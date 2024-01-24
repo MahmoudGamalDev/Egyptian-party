@@ -29,15 +29,26 @@ let countDown = (date) => {
   return { days, hours, minutes, seconds };
 };
 
-
 let displayCountDown = () => {
   let countDownObj = countDown("Dec 25, 24");
-  let eventSection = document.querySelector('.event-section');
+  let eventSection = document.querySelector(".event-section");
   eventSection.innerHTML = `<div class="days p-5 fs-3 fw-semibold border-1 border-white border">${countDownObj.days} D</div>
   <div class="hours p-5 fs-3 fw-semibold border-1 border-white border">${countDownObj.hours} h</div>
   <div class="mins p-5 fs-3 fw-semibold border-1 border-white border">${countDownObj.minutes} m</div>
-  <div class="sec p-5 fs-3 fw-semibold border-1 border-white border">${countDownObj.seconds} s</div>`
+  <div class="sec p-5 fs-3 fw-semibold border-1 border-white border">${countDownObj.seconds} s</div>`;
 };
 
-
 setInterval(displayCountDown, 1000);
+
+let message = document.querySelector("textarea");
+let characters = document.querySelector("form span");
+
+message.addEventListener("keyup", () => {
+  remainingCharacters = 100 - message.value.length;
+
+  if (remainingCharacters > 0) {
+    characters.innerHTML = `<span class="text-danger fs-3 pe-2">${remainingCharacters}</span>`;
+  } else {
+    characters.innerHTML = `<span class="text-danger fs-3 pe-2">0</span>`;
+  }
+}); 
